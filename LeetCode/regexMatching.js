@@ -6,10 +6,10 @@ var isMatch = function(s, p) {
     let j = 0
     let starJ
     while (j < s.length ) {
-      if (i < p.length && p[i] === s[j] || p[i] === "?") {
+      if ( p[i] === s[j] || p[i] === "?") {
         j++
         i++
-      } else if (i < p.length && p[i] === "*") {
+      } else if ( p[i] === "*") {
         starIndex = i
         starJ = j
         i++
